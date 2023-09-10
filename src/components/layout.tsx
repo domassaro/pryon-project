@@ -17,7 +17,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <>
       <Navbar>
         <NavbarBrand>
-          <p className="font-bold text-inherit">ACME</p>
+          <p className="font-bold text-inherit">Pryon</p>
         </NavbarBrand>
         <NavbarContent className="hidden sm:flex gap-4" justify="center">
           <NavbarItem isActive={router.asPath.includes("profile")}>
@@ -48,7 +48,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </NavbarContent>
       </Navbar>
       <LoginButton />
-      <div className="bg-red-600">{children}</div>
+      <div className="">{children}</div>
     </>
   );
 }

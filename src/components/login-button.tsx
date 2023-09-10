@@ -4,7 +4,6 @@ import { Link, Button } from "@nextui-org/react";
 export default function LoginButton() {
   const { data: session } = useSession();
   if (session) {
-    console.log("what is this::", session);
     return (
       <>
         Signed in as {session.user?.email} <br />
