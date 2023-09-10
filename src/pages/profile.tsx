@@ -1,9 +1,9 @@
 import Layout from "@/components/layout";
 
-export default function Page() {
+export default function Profile() {
   return (
     <>
-      <Layout>testing 12345</Layout>
+      <Layout>profile!</Layout>
     </>
   );
 }

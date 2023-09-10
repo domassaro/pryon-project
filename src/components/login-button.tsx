@@ -1,19 +1,37 @@
 import { useSession, signIn, signOut } from "next-auth/react";
+import { Link, Button } from "@nextui-org/react";
 
 export default function LoginButton() {
   const { data: session } = useSession();
   if (session) {
+    console.log("what is this::", session);
     return (
       <>
         Signed in as {session.user?.email} <br />
-        <button onClick={() => signOut()}>Sign out</button>
+        <Button
+          onClick={() => signOut()}
+          as={Link}
+          color="primary"
+          href="#"
+          variant="flat"
+        >
+          Sign Out
+        </Button>
       </>
     );
   }
   return (
     <>
       Not signed in <br />
-      <button onClick={() => signIn()}>Sign in</button>
+      <Button
+        onClick={() => signIn()}
+        as={Link}
+        color="primary"
+        href="#"
+        variant="flat"
+      >
+        Sign In
+      </Button>
     </>
   );
 }

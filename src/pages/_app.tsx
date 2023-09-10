@@ -1,5 +1,7 @@
 import { SessionProvider } from "next-auth/react";
+import { NextUIProvider } from "@nextui-org/react";
 import React from "react";
+import "../components/globals.css";
 
 export default function App({
   Component,
@@ -11,8 +13,10 @@ export default function App({
   };
 }) {
   return (
-    <SessionProvider session={session}>
-      <Component {...pageProps} />
-    </SessionProvider>
+    <NextUIProvider>
+      <SessionProvider session={session}>
+        <Component {...pageProps} />
+      </SessionProvider>
+    </NextUIProvider>
   );
 }
