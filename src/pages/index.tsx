@@ -1,9 +1,12 @@
-import Layout from "@/components/layout";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Page() {
-  return (
-    <>
-      <Layout>testing 12345</Layout>
-    </>
-  );
+  const { push } = useRouter();
+
+  useEffect(() => {
+    push("/profile");
+  });
+
+  return <p></p>;
 }
