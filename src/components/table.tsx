@@ -41,12 +41,14 @@ export default function TableWrapper() {
             <TableColumn>CRAFT</TableColumn>
           </TableHeader>
           <TableBody>
-            {astronautData?.people?.map((people, index) => (
-              <TableRow key={index}>
-                <TableCell>{people.name}</TableCell>
-                <TableCell>{people.craft}</TableCell>
-              </TableRow>
-            ))}
+            {
+              astronautData?.people?.map((people, index) => (
+                <TableRow key={index}>
+                  <TableCell>{people.name}</TableCell>
+                  <TableCell>{people.craft}</TableCell>
+                </TableRow>
+              )) as any
+            }
           </TableBody>
         </Table>
       ) : (
