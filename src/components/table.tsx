@@ -1,4 +1,5 @@
 import {
+  Card,
   Table,
   TableHeader,
   TableColumn,
@@ -35,8 +36,11 @@ export default function TableWrapper() {
   return (
     <>
       {astronautData ? (
-        <Table aria-label="Example static collection table">
-          <TableHeader>
+        <Table
+          className="tile row-start-2 row-end-5 col-span-3 md:col-span-3 lg:col-span-3"
+          aria-label="Example static collection table"
+        >
+          <TableHeader className="bg-red-600">
             <TableColumn>NAME</TableColumn>
             <TableColumn>CRAFT</TableColumn>
           </TableHeader>
@@ -52,7 +56,9 @@ export default function TableWrapper() {
           </TableBody>
         </Table>
       ) : (
-        <Spinner />
+        <Card className="m-auto tile row-start-2 row-end-5 col-span-3 md:col-span-3 lg:col-span-3">
+          <Spinner />
+        </Card>
       )}
     </>
   );

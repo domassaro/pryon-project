@@ -5,8 +5,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   try {
-    const requestUrl = "http://api.open-notify.org/iss-now.json";
-    const response = await fetch(requestUrl);
+    const response = await fetch("http://api.open-notify.org/iss-now.json");
     const data = await response.json();
     res.status(200).json(data);
   } catch (err) {
