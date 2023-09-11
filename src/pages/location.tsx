@@ -5,7 +5,12 @@ export default function Location() {
   return (
     <>
       <Layout>
-        <Map />
+        <div className="block w-full">
+          <p className="text-tiny uppercase font-bold pb-2">
+            Where is ISS now?
+          </p>
+          <Map />
+        </div>
       </Layout>
     </>
   );
