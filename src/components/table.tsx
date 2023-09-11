@@ -19,7 +19,7 @@ type Astronaut = Partial<{
 }>;
 
 const fetchAstronautData = async () => {
-  const api = await fetch("http://api.open-notify.org/astros.json");
+  const api = await fetch("/api/astronauts");
   return api.json();
 };
 

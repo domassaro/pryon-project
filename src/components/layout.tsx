@@ -10,7 +10,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     return (
       <div className="min-h-screen h-14 bg-gradient-to-r from-purple-500 to-pink-500">
         <Navigation session={session} />
-        <div className="flex flex-col items-center justify-center py-8 px-2">
+        <div className="flex items-center justify-center py-8 px-2">
           {children}
         </div>
       </div>

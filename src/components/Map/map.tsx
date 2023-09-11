@@ -17,7 +17,7 @@ type Location = Partial<{
 }>;
 
 const fetchLocation = async () => {
-  const api = await fetch("http://api.open-notify.org/iss-now.json");
+  const api = await fetch("/api/iss");
   return api.json();
 };
 
