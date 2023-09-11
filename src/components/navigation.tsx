@@ -52,7 +52,7 @@ export const Navigation = ({ session }: Props): JSX.Element => {
                   name={session.user?.name}
                   description={session.user?.email}
                   avatarProps={{
-                    src: session.user?.image,
+                    src: session.user?.image as string,
                   }}
                 />
               </DropdownTrigger>
