@@ -2,6 +2,7 @@ import NextAuth from "next-auth";
 import DiscordProvider from "next-auth/providers/discord";
 
 export const authOptions = {
+  secret: process.env.SECRET,
   // Configure one or more authentication providers
   providers: [
     DiscordProvider({
