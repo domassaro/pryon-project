@@ -19,7 +19,7 @@ export const TableWrapper = ({ astronauts }: Props): JSX.Element => {
     <>
       {astronauts ? (
         <Table
-          className="tile row-start-2 row-end-5 col-span-3 md:col-span-3 lg:col-span-3"
+          className="tile col-span-3 md:col-span-3 lg:col-span-3"
           aria-label="Example static collection table"
         >
           <TableHeader className="bg-red-600">

@@ -34,37 +34,39 @@ export default function Astronauts() {
   return (
     <>
       {astronautData && (
-        <div className="container m-auto grid grid-cols-3 grid-rows-3 md:grid-cols-5 lg:grid-cols-3 gap-4">
+        <div className="container flex flex-col gap-4">
+          <div className="flex gap-4">
+            <Card className="flex-1">
+              <Image
+                alt="front"
+                removeWrapper
+                className="object-cover"
+                height={200}
+                width={200}
+                src={frontAstronaut.src}
+              />
+            </Card>
+            <Card className="flex-1">
+              <CardHeader className="flex-col !items-start">
+                <p className="text-tiny uppercase font-bold">
+                  How many astronauts are in space?
+                </p>
+                <h4 className="font-medium text-8xl">{astronautData.number}</h4>
+              </CardHeader>
+            </Card>
+            <Card className="flex-1">
+              <Image
+                alt="back"
+                removeWrapper
+                className="object-cover"
+                height={200}
+                width={200}
+                src={backAstronaut.src}
+              />
+            </Card>
+          </div>
           <TableWrapper astronauts={astronautData.people || []} />
           <Card>
-            <Image
-              alt="front"
-              removeWrapper
-              className="z-0 object-cover p-2 mx-auto"
-              height={200}
-              width={200}
-              src={frontAstronaut.src}
-            />
-          </Card>
-          <Card className="tile">
-            <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-              <p className="text-tiny uppercase font-bold">
-                How many astronauts are in space?
-              </p>
-              <h4 className="font-medium text-8xl">{astronautData.number}</h4>
-            </CardHeader>
-          </Card>
-          <Card className="tile">
-            <Image
-              alt="back"
-              removeWrapper
-              className="z-0 object-cover p-2 mx-auto"
-              height={200}
-              width={200}
-              src={backAstronaut.src}
-            />
-          </Card>
-          <Card className="tile  row-start-6 col-span-3 md:col-span-3 lg:col-span-3">
             <Image
               alt="rocket"
               removeWrapper
