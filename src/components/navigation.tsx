@@ -23,7 +23,7 @@ export const Navigation = ({ session }: Props): JSX.Element => {
 
   return (
     <>
-      <Navbar>
+      <Navbar className="bg-white">
         <NavbarBrand>
           <p className="font-bold text-inherit">Pryon</p>
         </NavbarBrand>
