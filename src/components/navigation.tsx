@@ -1,4 +1,5 @@
 import {
+  Image,
   Navbar,
   NavbarBrand,
   NavbarContent,
@@ -14,6 +15,7 @@ import NextLink from "next/link";
 import { useRouter } from "next/router";
 import { signOut } from "next-auth/react";
 import { Session } from "next-auth";
+import Logo from "../../public/images/logo.png";
 
 interface Props {
   session: Session;
@@ -24,11 +26,16 @@ export const Navigation = ({ session }: Props): JSX.Element => {
 
   return (
     <>
-      <Navbar className="bg-white">
-        <NavbarBrand>
-          <p className="font-bold text-inherit">Pryon</p>
-        </NavbarBrand>
-        <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <Navbar className="bg-white px-0">
+        <NavbarContent className="hidden sm:flex" justify="start">
+          <Image
+            className="pr-2"
+            alt="logo"
+            width={200}
+            height={100}
+            src={Logo.src}
+          />
+
           <NavbarItem isActive={router.asPath.includes("profile")}>
             <Link href="/profile" as={NextLink} color="foreground">
               Profile

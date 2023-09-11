@@ -5,7 +5,7 @@ import "leaflet/dist/leaflet.css";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css"; // Re-uses images from ~leaflet package
 import "leaflet-defaulticon-compatibility";
 import { LatLngExpression } from "leaflet";
-// import { iconImage } from "./customIcon";
+import { iconImage } from "./customIcon";
 
 type Location = Partial<{
   iss_position: {
@@ -49,10 +49,7 @@ export default function Map() {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
 
-          <Marker
-            position={position as LatLngExpression}
-            // icon={iconImage}
-          >
+          <Marker position={position as LatLngExpression} icon={iconImage}>
             <Popup>
               Last Updated:&nbsp;
               {new Date(location.timestamp! * 1000).toLocaleTimeString()}
