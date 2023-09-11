@@ -4,6 +4,7 @@ import { Spinner } from "@nextui-org/react";
 import "leaflet/dist/leaflet.css";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css"; // Re-uses images from ~leaflet package
 import "leaflet-defaulticon-compatibility";
+import { LatLngExpression } from "leaflet";
 // import { iconImage } from "./customIcon";
 
 type Location = Partial<{
@@ -38,7 +39,7 @@ export default function Map() {
     <>
       {location ? (
         <MapContainer
-          center={position}
+          center={position as LatLngExpression}
           zoom={3}
           scrollWheelZoom={false}
           style={{ height: 400, width: "100%" }}
@@ -49,9 +50,8 @@ export default function Map() {
           />
 
           <Marker
-            position={position}
+            position={position as LatLngExpression}
             // icon={iconImage}
-            style={{ zIndex: "1!important" }}
           >
             <Popup>
               Last Updated:&nbsp;
