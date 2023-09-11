@@ -36,7 +36,7 @@ export default function Astronauts() {
       {astronautData && (
         <div className="container flex flex-col gap-4">
           <div className="flex gap-4">
-            <Card className="flex-1">
+            <Card className="flex-1 p-3 items-center">
               <Image
                 alt="front"
                 removeWrapper
@@ -46,15 +46,15 @@ export default function Astronauts() {
                 src={frontAstronaut.src}
               />
             </Card>
-            <Card className="flex-1">
-              <CardHeader className="flex-col !items-start">
+            <Card className="flex-1 p-3">
+              <CardHeader className="flex-col items-center">
                 <p className="text-tiny uppercase font-bold">
                   How many astronauts are in space?
                 </p>
-                <h4 className="font-medium text-8xl">{astronautData.number}</h4>
+                <h4 className="font-medium text-9xl">{astronautData.number}</h4>
               </CardHeader>
             </Card>
-            <Card className="flex-1">
+            <Card className="flex-1 p-3 items-center">
               <Image
                 alt="back"
                 removeWrapper

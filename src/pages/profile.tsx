@@ -1,4 +1,3 @@
-import { ThemeSwitcher } from "@/components/themeSwitcher";
 import { Card, CardBody, Image } from "@nextui-org/react";
 import { useSession } from "next-auth/react";
 import rocket from "../../public/images/rocket.svg";
@@ -18,7 +17,6 @@ export default function Profile() {
             current people in space and their respective spacecrafts and the
             current location of the ISS!
           </p>
-          <ThemeSwitcher />
         </CardBody>
         <div className="d-flex">
           <Image
