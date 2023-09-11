@@ -8,7 +8,7 @@ export default function Profile() {
   return (
     <>
       <Card fullWidth>
-        <CardBody>
+        <CardBody data-testid="welcome-copy">
           <p className="text-sm uppercase font-bold">
             Welcome to mission control, {session?.user?.name}!
           </p>
