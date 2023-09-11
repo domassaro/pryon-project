@@ -10,6 +10,7 @@ import {
   DropdownMenu,
   DropdownTrigger,
 } from "@nextui-org/react";
+import NextLink from "next/link";
 import { useRouter } from "next/router";
 import { signOut } from "next-auth/react";
 import { Session } from "next-auth";
@@ -29,17 +30,17 @@ export const Navigation = ({ session }: Props): JSX.Element => {
         </NavbarBrand>
         <NavbarContent className="hidden sm:flex gap-4" justify="center">
           <NavbarItem isActive={router.asPath.includes("profile")}>
-            <Link href="/profile" color="foreground">
+            <Link href="/profile" as={NextLink} color="foreground">
               Profile
             </Link>
           </NavbarItem>
           <NavbarItem isActive={router.asPath.includes("astronauts")}>
-            <Link href="/astronauts" color="foreground">
+            <Link href="/astronauts" as={NextLink} color="foreground">
               Astronauts
             </Link>
           </NavbarItem>
           <NavbarItem isActive={router.asPath.includes("location")}>
-            <Link color="foreground" href="/location">
+            <Link color="foreground" as={NextLink} href="/location">
               ISS Location
             </Link>
           </NavbarItem>

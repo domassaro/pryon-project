@@ -42,7 +42,7 @@ export default function Map() {
           center={position as LatLngExpression}
           zoom={3}
           scrollWheelZoom={false}
-          style={{ height: 400, width: "100%" }}
+          style={{ height: 500, width: "100%" }}
         >
           <TileLayer
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

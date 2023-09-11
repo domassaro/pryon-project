@@ -31,14 +31,12 @@ export const TableWrapper = ({ astronauts }: Props): JSX.Element => {
             </TableColumn>
           </TableHeader>
           <TableBody>
-            {
-              astronauts.map((people, index) => (
-                <TableRow key={index}>
-                  <TableCell>{people.name}</TableCell>
-                  <TableCell>{people.craft}</TableCell>
-                </TableRow>
-              )) as any
-            }
+            {astronauts.map((astronaut, index) => (
+              <TableRow key={index}>
+                <TableCell>{astronaut.name}</TableCell>
+                <TableCell>{astronaut.craft}</TableCell>
+              </TableRow>
+            ))}
           </TableBody>
         </Table>
       ) : (
