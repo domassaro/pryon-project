@@ -34,7 +34,10 @@ export default function Astronauts() {
   return (
     <>
       {astronautData && (
-        <div className="container flex flex-col gap-4">
+        <div
+          data-testid="astronaut-wrapper"
+          className="container flex flex-col gap-4"
+        >
           <div className="flex gap-4">
             <Card className="flex-1 p-3 items-center">
               <Image
