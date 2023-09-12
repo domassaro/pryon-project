@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import backAstronaut from "../../public/images/astronaut-back.png";
 import frontAstronaut from "../../public/images/astronaut-front.png";
 import solarSystem from "../../public/images/solar-system.svg";
+import { fetchAstronautData } from "./api/astronautApi";
 
 type AstronautData = Partial<{
   people: Astronaut[];
@@ -14,11 +15,6 @@ type AstronautData = Partial<{
 export type Astronaut = {
   craft: string;
   name: string;
-};
-
-const fetchAstronautData = async () => {
-  const api = await fetch("/api/astronauts");
-  return api.json();
 };
 
 export default function Astronauts() {

@@ -1,11 +1,11 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import Astronauts from "../pages/astronauts";
 import { useSession } from "next-auth/react";
-import API from "../pages/api/astronauts";
 import "@testing-library/jest-dom";
+import { fetchAstronautData } from "@/pages/api/astronautApi";
 jest.mock("next-auth/react");
-jest.mock("../pages/api/astronauts");
+jest.mock("../pages/api/astronautApi");
 
 describe("Astronauts", () => {
   it("Astronauts page loads", async () => {
@@ -28,18 +28,12 @@ describe("Astronauts", () => {
     };
 
     jest.fn().mockResolvedValue(mockResponse);
-    const mockFetch = jest.fn().mockImplementation(() => ({
-      json: jest.fn().mockResolvedValue(mockResponse),
-    }));
-
-    jest.mock("node-fetch", () => {
-      return jest.fn().mockImplementation((...p) => {
-        return mockFetch(...p);
-      });
-    });
+    fetchAstronautData.mockResolvedValue(mockResponse);
 
     render(<Astronauts />);
 
-    expect(screen.getByTestId("astronaut-wrapper")).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.getByTestId("astronaut-wrapper")).toBeInTheDocument();
+    });
   });
 });

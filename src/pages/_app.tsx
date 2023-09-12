@@ -17,7 +17,7 @@ export default function App({
 }) {
   return (
     <NextUIProvider>
-      <NextThemesProvider attribute="class">
+      <NextThemesProvider attribute="class" defaultTheme="light">
         <SessionProvider session={session}>
           <link rel="icon" type="image/svg+xml" href="/public/favicon.ico" />
           <Layout>
