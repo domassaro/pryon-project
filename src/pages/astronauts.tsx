@@ -50,7 +50,12 @@ export default function Astronauts() {
                 <p className="text-tiny uppercase font-bold">
                   How many astronauts are in space?
                 </p>
-                <h4 className="font-medium text-9xl">{astronautData.number}</h4>
+                <h4
+                  data-testid="astronaut-count"
+                  className="font-medium text-9xl"
+                >
+                  {astronautData.number}
+                </h4>
               </CardHeader>
             </Card>
             <Card className="flex-1 p-3 items-center">
