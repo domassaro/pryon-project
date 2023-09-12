@@ -47,7 +47,7 @@ describe("Astronauts", () => {
 
     await waitFor(() => {
       expect(screen.getByTestId("astronaut-count")).toHaveTextContent(
-        mockResponse.number
+        mockResponse.number.toString()
       );
     });
   });
