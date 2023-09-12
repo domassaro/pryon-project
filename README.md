@@ -2,7 +2,19 @@ Welcome to mission control! This is a [Next.js](https://nextjs.org/) project boo
 
 ## 🧑‍🚀 Getting Started
 
-First, run the development server:
+First, be sure to clone the repository
+
+```gh repo clone domassaro/pryon-project
+
+```
+
+Install dependencies
+
+```npm install
+
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -11,4 +23,3 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 Alternatively, you can check out the deployed project: https://pryon-project.vercel.app/
-
