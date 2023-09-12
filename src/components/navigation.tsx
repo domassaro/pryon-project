@@ -64,7 +64,7 @@ export const Navigation = ({ session }: Props): JSX.Element => {
                   }}
                 />
               </DropdownTrigger>
-              <DropdownMenu aria-label="Static Actions">
+              <DropdownMenu aria-label="Actions">
                 <DropdownItem
                   key="delete"
                   className="text-danger"
