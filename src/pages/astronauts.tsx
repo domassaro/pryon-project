@@ -1,10 +1,10 @@
-import { Card, CardHeader, Image } from "@nextui-org/react";
+import { Card, CardHeader, Image, Spinner } from "@nextui-org/react";
 import { TableWrapper } from "@/components/table";
 import { useEffect, useState } from "react";
+import { fetchAstronautData } from "./api/astronautApi";
 import backAstronaut from "../../public/images/astronaut-back.png";
 import frontAstronaut from "../../public/images/astronaut-front.png";
 import solarSystem from "../../public/images/solar-system.svg";
-import { fetchAstronautData } from "./api/astronautApi";
 
 type AstronautData = Partial<{
   people: Astronaut[];
@@ -29,7 +29,7 @@ export default function Astronauts() {
   }, []);
   return (
     <>
-      {astronautData && (
+      {astronautData ? (
         <div
           data-testid="astronaut-wrapper"
           className="container flex flex-col gap-4"
@@ -80,6 +80,10 @@ export default function Astronauts() {
             />
           </Card>
         </div>
+      ) : (
+        <Card className="w-full flex p-3">
+          <Spinner className="mx-auto" color="secondary" size="lg" />
+        </Card>
       )}
     </>
   );

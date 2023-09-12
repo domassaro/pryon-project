@@ -1,10 +1,10 @@
 import { SessionProvider } from "next-auth/react";
 import { NextUIProvider } from "@nextui-org/react";
+import { Session } from "next-auth";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import Layout from "@/components/layout";
 import React from "react";
 import "../components/globals.css";
-import { Session } from "next-auth";
 
 export default function App({
   Component,
