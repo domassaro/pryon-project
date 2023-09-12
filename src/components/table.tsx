@@ -35,13 +35,11 @@ export const TableWrapper = ({ astronauts }: Props): JSX.Element => {
 
   const filteredItems = useMemo(() => {
     let filteredUsers = [...astronauts];
-
     if (hasSearchFilter) {
       filteredUsers = filteredUsers.filter((user) =>
         user.name.toLowerCase().includes(filterValue.toLowerCase())
       );
     }
-
     return filteredUsers;
   }, [astronauts, filterValue, hasSearchFilter]);
 
@@ -50,7 +48,6 @@ export const TableWrapper = ({ astronauts }: Props): JSX.Element => {
   const items = useMemo(() => {
     const start = (page - 1) * rowsPerPage;
     const end = start + rowsPerPage;
-
     return filteredItems.slice(start, end);
   }, [page, filteredItems, rowsPerPage]);
 
