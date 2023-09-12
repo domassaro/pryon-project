@@ -40,7 +40,10 @@ export default function Location() {
   return (
     <>
       {location ? (
-        <div className="container flex flex-col gap-4">
+        <div
+          data-testid="location-wrapper"
+          className="container flex flex-col gap-4"
+        >
           <div className="flex gap-4">
             <Card className="flex-1 p-3 items-center">
               <CardHeader className="flex-col items-center">
@@ -73,7 +76,7 @@ export default function Location() {
               </CardHeader>
             </Card>
           </div>
-          <Card data-testid="location-wrapper" className="block h-full w-full">
+          <Card className="block h-full w-full">
             <CardBody className="block w-full">
               <p className="text-tiny uppercase font-bold pb-2">
                 Where is ISS now?

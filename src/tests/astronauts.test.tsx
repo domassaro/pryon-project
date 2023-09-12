@@ -36,8 +36,6 @@ describe("Astronauts", () => {
   it("loads the Astronaut page and respecting content", async () => {
     render(<Astronauts />);
 
-    // useEffect runs for the first time after mount so the instant after it
-    // observes the component is when it renders the data -- so waitFor is required
     await waitFor(() => {
       expect(screen.getByTestId("astronaut-wrapper")).toBeInTheDocument();
     });
