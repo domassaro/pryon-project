@@ -1,6 +1,5 @@
 import { SessionProvider } from "next-auth/react";
 import { NextUIProvider } from "@nextui-org/react";
-import { Session } from "next-auth";
 import type { AppProps } from "next/app";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import Layout from "@/components/layout";
