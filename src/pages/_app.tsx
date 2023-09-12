@@ -1,20 +1,16 @@
 import { SessionProvider } from "next-auth/react";
 import { NextUIProvider } from "@nextui-org/react";
 import { Session } from "next-auth";
+import type { AppProps } from "next/app";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import Layout from "@/components/layout";
 import React from "react";
 import "../components/globals.css";
 
-export default function App({
+export default function MyApp({
   Component,
   pageProps: { session, ...pageProps },
-}: {
-  Component: any;
-  pageProps: {
-    session: Session;
-  };
-}) {
+}: AppProps) {
   return (
     <NextUIProvider>
       <NextThemesProvider attribute="class" defaultTheme="light">
