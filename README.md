@@ -4,14 +4,15 @@ Welcome to mission control! This is a [Next.js](https://nextjs.org/) project boo
 
 First, be sure to clone the repository
 
-```gh repo clone domassaro/pryon-project
+```bash
+gh repo clone domassaro/pryon-project
 
 ```
 
 Install dependencies
 
-```npm install
-
+```bash
+npm install
 ```
 
 Then, run the development server:
