@@ -40,8 +40,8 @@ export default function Astronauts() {
                 alt="front"
                 removeWrapper
                 className="object-cover"
-                height={200}
-                width={200}
+                height={150}
+                width={150}
                 src={frontAstronaut.src}
               />
             </Card>
@@ -63,8 +63,8 @@ export default function Astronauts() {
                 alt="back"
                 removeWrapper
                 className="object-cover"
-                height={200}
-                width={200}
+                height={150}
+                width={150}
                 src={backAstronaut.src}
               />
             </Card>
