@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
 import { Spinner } from "@nextui-org/react";
-import "leaflet/dist/leaflet.css";
-import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css"; // Re-uses images from ~leaflet package
-import "leaflet-defaulticon-compatibility";
 import { LatLngExpression } from "leaflet";
 import { iconImage } from "./customIcon";
+import "leaflet/dist/leaflet.css";
+import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css";
+import "leaflet-defaulticon-compatibility";
 
 type Location = Partial<{
   iss_position: {
@@ -57,7 +57,9 @@ export default function Map() {
           </Marker>
         </MapContainer>
       ) : (
-        <Spinner />
+        <div className="w-full flex p-3">
+          <Spinner className="mx-auto" color="secondary" size="lg" />
+        </div>
       )}
     </>
   );

@@ -91,7 +91,7 @@ export const TableWrapper = ({ astronauts }: Props): JSX.Element => {
                 Craft
               </TableColumn>
             </TableHeader>
-            <TableBody items={items}>
+            <TableBody items={items} emptyContent={"No astronauts found!"}>
               {items.map((astronaut, index) => (
                 <TableRow key={index}>
                   <TableCell>{astronaut.name}</TableCell>
@@ -102,8 +102,8 @@ export const TableWrapper = ({ astronauts }: Props): JSX.Element => {
           </Table>
         </>
       ) : (
-        <Card className="m-auto tile row-start-2 row-end-5 col-span-3 md:col-span-3 lg:col-span-3">
-          <Spinner />
+        <Card className="w-full py-4 m-auto tile row-start-2 row-end-5 col-span-3 md:col-span-3 lg:col-span-3">
+          <Spinner className="mx-auto" color="secondary" size="lg" />
         </Card>
       )}
     </>
