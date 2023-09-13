@@ -12,7 +12,10 @@ export default function Profile() {
         className="container flex flex-col gap-4 text-white"
       >
         <div className="flex gap-4">
-          <div className="flex-1 p-3 items-center" data-testid="welcome-copy">
+          <div
+            className="flex-1 p-3 items-center max-w-md break-words"
+            data-testid="welcome-copy"
+          >
             <p className="text-3xl uppercase font-bold py-2">
               Welcome to mission control <br /> {session?.user?.name}
             </p>
