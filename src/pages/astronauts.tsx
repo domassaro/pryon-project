@@ -45,7 +45,7 @@ export default function Astronauts() {
                 src={frontAstronaut.src}
               />
             </Card>
-            <Card className="flex-1 p-3">
+            <Card className="flex-1 p-3 text-gray-700">
               <CardHeader className="flex-col items-center">
                 <p className="text-tiny uppercase font-bold">
                   How many astronauts are in space?

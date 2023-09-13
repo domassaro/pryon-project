@@ -45,7 +45,7 @@ export default function Location() {
           className="container flex flex-col gap-4"
         >
           <div className="flex gap-4">
-            <Card className="flex-1 p-3 items-center">
+            <Card className="flex-1 p-3 items-center text-gray-700">
               <CardHeader className="flex-col items-center">
                 <p className="text-tiny uppercase font-bold">latitude</p>
                 <h4 className="font-medium text-5xl">
@@ -66,7 +66,7 @@ export default function Location() {
                 />
               </CardHeader>
             </Card>
-            <Card className="flex-1 p-3 items-center">
+            <Card className="flex-1 p-3 items-center text-gray-700">
               <CardHeader className="flex-col items-center">
                 <p className="text-tiny uppercase font-bold">longitude</p>
                 <h4 className="font-medium text-5xl">
@@ -78,7 +78,7 @@ export default function Location() {
           </div>
           <Card className="block h-full w-full">
             <CardBody className="block w-full">
-              <p className="text-tiny uppercase font-bold pb-2">
+              <p className="text-tiny uppercase font-bold pb-2 text-gray-700">
                 Where is ISS now?
               </p>
               <Map position={position as LatLngExpression} time={time} />
