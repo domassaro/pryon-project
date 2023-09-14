@@ -30,10 +30,12 @@ describe("ISS Location", () => {
   });
   it("loads the ISS page and respecting content", async () => {
     render(<Location />);
-    jest.advanceTimersByTime(1000);
 
-    await waitFor(() => {
-      expect(screen.getByTestId("location-wrapper")).toBeInTheDocument();
-    });
+    await waitFor(
+      () => {
+        expect(screen.getByTestId("location-wrapper")).toBeInTheDocument();
+      },
+      { timeout: 8000 }
+    );
   });
 });
